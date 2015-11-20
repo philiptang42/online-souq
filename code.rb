@@ -34,9 +34,10 @@ while true
 end
   puts "#{name}, thanks for shopping. Here's your total selection:"
   custom_souq.each do |item| puts "* #{item}"
+  end
   print "\n"
   puts "Btw, we noticed you entered some items that aren't included
-  in our onlinq Souq. We don't have them in stock, but if we get any,
+  in our online Souq. We don't have them in stock, but if we get any,
   we'll let you know."
   not_in_stock.each do |item| puts "* #{item}"
 end
