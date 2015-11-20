@@ -1,5 +1,7 @@
 custom_souq = []
 
+not_in_stock = []
+
 selection = ""
 
 souq_items = ["old paperback book",
@@ -27,8 +29,14 @@ while true
     puts selection.to_s + " has been added!"
   else
     puts "We don't have those in stock. Pick something we do."
+    not_in_stock << selection
   end
 end
   puts "#{name}, thanks for shopping. Here's your total selection:"
   custom_souq.each do |item| puts "* #{item}"
+  print "\n"
+  puts "Btw, we noticed you entered some items that aren't included
+  in our onlinq Souq. We don't have them in stock, but if we get any,
+  we'll let you know."
+  not_in_stock.each do |item| puts "* #{item}"
 end
